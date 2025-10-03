@@ -1,0 +1,30 @@
+{
+  "theme": {
+    "primaryColor": "#002776",
+    "secondaryColor": "#ff1801",
+    "accentColor": "#ff1801",
+    "logo": "/assets/redbull-logo.png",
+    "fontFamily": "Arial, sans-serif",
+    "giftwrap": "/assets/giftwrap.png"
+  },
+  "days": [
+    {
+      "day": 1,
+      "title": "¡Bienvenido diciembre!",
+      "message": "Red Bull te da alas en Navidad 🎅",
+      "image": "/assets/redbull-day1.png"
+    },
+    {
+      "day": 2,
+      "title": "Velocidad y energía",
+      "message": "Un brindis por la Fórmula 1 🏎💨",
+      "image": "/assets/redbull-day2.png"
+    },
+    {
+      "day": 3,
+      "title": "La magia de la velocidad",
+      "message": "¡Disfruta tus navidades al MAXimo! 🏎💨",
+      "image": "/assets/redbull-day3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "theme": {
+    "primaryColor": "#3d5a80",
+    "secondaryColor": "#98c1d9",
+    "accentColor": "#98c1d9",
+    "logo": "/assets/tclofi-logo.png",
+    "fontFamily": "'Courier New', monospace",
+    "giftwrap": "/assets/giftwrap.png"
+  },
+  "days": [
+    {
+      "day": 1,
+      "title": "Diciembre comienza",
+      "message": "Un beat tranquilo para acompañarte 🎧",
+      "image": "/assets/tclofi-day1.png"
+    },
+    {
+      "day": 2,
+      "title": "Luces suaves",
+      "message": "Jazz bajo las estrellas ✨",
+      "image": "/assets/tclofi-day2.png"
+    },
+    {
+      "day": 3,
+      "title": "¡El ritmo navideño no para!🎧",
+      "message": "🎶 Hoy el día 3 suena a guitarras suaves y luces cálidas, disfruta del flow navideño ✨",
+      "image": "/assets/tclofi-day3.png"
+    }
+  ]
+}
