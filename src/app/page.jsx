@@ -15,7 +15,6 @@ export default function Page() {
 
   return (
     <>
-      {/* Selector de marca */}
       <header style={{ textAlign: "center", padding: "20px" }}>
         {theme?.logo && (
           <img
@@ -76,7 +75,6 @@ export default function Page() {
         })}
       </main>
 
-      {/* Modal */}
       {openDay && (
         <Modal onClose={() => setOpenDay(null)}>
           <h2 style={{ color: theme?.primaryColor }}>
