@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎄 Calendario de Adviento Interactivo
 
-## Getting Started
+Este proyecto es un **Calendario de Adviento personalizable** desarrollado con **Next.js**.  
+La idea principal es que pueda **adaptarse a diferentes marcas** (ejemplo: Red Bull, TC Lofi) cambiando colores, logos y mensajes navideños de forma sencilla a través de archivos JSON de configuración.
 
-First, run the development server:
+---
+
+## 🚀 Características principales
+
+- **Framework:** Next.js con App Router.
+- **Estilos:** CSS Modules + variables dinámicas de theme.
+- **Soporte multi-marca:** configuración desde JSON (`/config/redbull.json`, `/config/tclofi.json`).
+- **Componentes reutilizables:** `DayCard`, `Modal`, `ThemeProvider`.
+- **Calendario interactivo:**
+  - Casillas desbloqueadas muestran contenido del día.
+  - Casillas bloqueadas muestran un "gift wrap" con animación shake y mensaje jocoso al intentar abrirlas.
+- **Responsive:** diseño adaptable (6 columnas en desktop, 4 en tablet, 2 en móvil).
+- **Modal navideño:** muestra mensaje, título e imagen personalizados según el día.
+
+---
+
+## 📂 Estructura del proyecto
+
+```
+src/
+  app/
+    page.jsx                # Página principal del calendario
+    CalendarGrid.module.css # Estilos del grid responsive
+  components/
+    DayCard.jsx             # Casilla individual del calendario
+    DayCard.module.css
+    Modal.jsx               # Modal reutilizable
+    Modal.module.css
+    ThemeProvider.jsx       # Contexto para manejar temas y marcas
+  config/
+    redbull.json            # Configuración Red Bull
+    tclofi.json             # Configuración TC Lofi
+  public/
+    assets/                 # Logos, imágenes, gift wrap
+```
+
+---
+
+## ⚙️ Configuración de marcas
+
+Cada marca tiene un JSON en la carpeta `/config`.  
+Ejemplo `redbull.json`:
+
+```json
+{
+  "theme": {
+    "primaryColor": "#002776",
+    "secondaryColor": "#ff1801",
+    "accentColor": "#ffd700",
+    "logo": "/assets/redbull-logo.png",
+    "giftwrap": "/assets/giftwrap.png",
+    "fontFamily": "Arial, sans-serif"
+  },
+  "days": [
+    {
+      "day": 1,
+      "title": "¡Bienvenido diciembre!",
+      "message": "Red Bull te da alas en Navidad 🎅",
+      "image": "/assets/redbull-day1.png"
+    },
+    {
+      "day": 2,
+      "title": "Velocidad y energía",
+      "message": "Un brindis por la Fórmula 1 🏎💨",
+      "image": "/assets/redbull-day2.png"
+    }
+  ]
+}
+```
+
+Con este formato se pueden crear fácilmente nuevas configuraciones de marca.
+
+---
+
+## 🛠️ Instalación y uso
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/tuusuario/advent-calendar.git
+cd advent-calendar
+```
+
+Instala dependencias:
+
+```bash
+npm install
+```
+
+Ejecuta en modo desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Accede en el navegador:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Compila para producción:
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💡 Ideas de mejora
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Añadir **animaciones navideñas extra** ( música de fondo opcional).
+- Integración con **Firebase o Supabase** para que cada usuario pueda desbloquear su calendario personal.
+- Posibilidad de **compartir en redes sociales** el mensaje del día.
+- Editor de marcas vía interfaz (subir logo, elegir colores, etc.), sin tener que tocar el JSON manualmente.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Reutilización para marcas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este calendario está pensado para ser **100% reutilizable**:
+
+- Se cambia el logo, colores y mensajes desde JSON.
+- No hace falta modificar el código base.
+- Permite usar la misma estructura para campañas de diferentes clientes o marcas.
+
+Ejemplos:
+
+- 🎨 **TC Lofi:** versión con colores pastel, mensajes relajados y temática musical.
+- 🏎️ **Red Bull Racing:** colores corporativos, mensajes deportivos y energía navideña.
+
+---
+
+## 📜 Licencia
+
+MIT License – libre para usar, modificar y compartir.
